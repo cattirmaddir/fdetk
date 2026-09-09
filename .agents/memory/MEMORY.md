@@ -1,0 +1,1 @@
+- [Bare proxy limiter](bare-proxy-limiter.md) — keep-alive limiting counts requests per shared preview IP, not just active sockets.

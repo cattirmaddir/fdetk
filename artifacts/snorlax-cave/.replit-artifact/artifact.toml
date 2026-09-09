@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Snorlax's Cave"
+description = "A browser-based learning and entertainment hub with games, apps, customizable settings, and an in-browser web proxy experience."
+version = "1.0.0"
+id = "artifacts/snorlax-cave"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21116
+
+[services.development]
+run = "pnpm --filter @workspace/snorlax-cave run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/snorlax-cave", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/snorlax-cave/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21116"
+BASE_PATH = "/"
