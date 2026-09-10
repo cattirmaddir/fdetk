@@ -5,6 +5,17 @@ import { defineConfig } from 'vite';
 
 import runtimeErrorOverlay from '@replit/vite-plugin-runtime-error-modal';
 
+const trimDuplicateDocumentPlugin = () => ({
+  name: 'trim-duplicate-document',
+  transformIndexHtml(html: string) {
+    const firstDocumentEnd = html.indexOf('</html>');
+    if (firstDocumentEnd === -1) return html;
+
+    const firstDocument = html.slice(0, firstDocumentEnd + '</html>'.length);
+    return firstDocument;
+  },
+});
+
 const rawPort = process.env.PORT;
 
 if (!rawPort) {
@@ -30,6 +41,7 @@ if (!basePath) {
 export default defineConfig({
   base: basePath,
   plugins: [
+    trimDuplicateDocumentPlugin(),
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
