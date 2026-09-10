@@ -420,7 +420,9 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
 
         if (__uv.attrs.isSrcset(event.data.name)) {
             event.target.call(event.that, __uv.attributePrefix + '-attr-' + event.data.name, event.data.value);
-            event.data.value = __uv.html.wrapSrcset(event.data.value);
+            if (typeof event.data.value === 'string') {
+                event.data.value = __uv.html.wrapSrcset(event.data.value);
+            }
         };
 
         if (__uv.attrs.isForbidden(event.data.name)) {

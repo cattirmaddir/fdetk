@@ -16,11 +16,22 @@
   <script src="/assets/js/functions.js"></script>
   <script>
     // Custom Background Check
-    var bgUrl = localStorage.getItem('backgroundImage');
-    if (bgUrl === 'none' || bgUrl === null || bgUrl === '') {
-      document.body.style.backgroundImage = `url('/assets/img/snorlax_background.jpg')`;
+    function applyCustomBackground() {
+      const body = document.body;
+      if (!body) return;
+
+      const bgUrl = localStorage.getItem('backgroundImage');
+      if (bgUrl === 'none' || bgUrl === null || bgUrl === '') {
+        body.style.backgroundImage = "url('/assets/img/snorlax_background.jpg')";
+      } else {
+        body.style.backgroundImage = `url(${bgUrl})`;
+      }
+    }
+
+    if (document.body) {
+      applyCustomBackground();
     } else {
-      document.body.style.backgroundImage = `url(${bgUrl})`;
+      document.addEventListener('DOMContentLoaded', applyCustomBackground, { once: true });
     }
   </script>
   <script>

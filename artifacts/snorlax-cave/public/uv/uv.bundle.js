@@ -72,6 +72,7 @@
             return ast;
         };
         wrapSrcset(str, meta = this.ctx.meta) {
+            if (typeof str !== 'string') return str;
             return str.split(',').map(src => {
                 const parts = src.trimStart().split(' ');
                 if (parts[0]) parts[0] = this.ctx.rewriteUrl(parts[0], meta);
@@ -79,6 +80,7 @@
             }).join(', ');
         };
         unwrapSrcset(str, meta = this.ctx.meta) {
+            if (typeof str !== 'string') return str;
             return str.split(',').map(src => {
                 const parts = src.trimStart().split(' ');
                 if (parts[0]) parts[0] = this.ctx.sourceUrl(parts[0], meta);
