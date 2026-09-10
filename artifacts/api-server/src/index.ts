@@ -20,9 +20,9 @@ if (Number.isNaN(port) || port <= 0) {
 const server = http.createServer();
 const bareServer = createBareServer("/bare/", {
   connectionLimiter: {
-    maxConnectionsPerIP: 200,
+    maxConnectionsPerIP: 1000,
     windowDuration: 60,
-    blockDuration: 10,
+    blockDuration: 5,
   },
 });
 

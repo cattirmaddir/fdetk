@@ -1,0 +1,88 @@
+ A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+(anonymous) @ portal:207
+ A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+(anonymous) @ portal:207
+invoke.js:1  Failed to load resource: the server responded with a status of 403 (Forbidden)
+ A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+(anonymous) @ portal:220
+ A parser-blocking, cross site (i.e. different eTLD+1) script, https://www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js, is invoked via document.write. The network request for this script MAY be blocked by the browser in this or a future page load due to poor network connectivity. If blocked in this page load, it will be confirmed in a subsequent console message. See https://www.chromestatus.com/feature/5718547946799104 for more details.
+(anonymous) @ portal:220
+invoke.js:1  Failed to load resource: the server responded with a status of 403 (Forbidden)
+data:image/svg+xml;base64:1  Failed to load resource: net::ERR_INVALID_URL
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+A preload for '<URL>' is found, but is not used because the request credentials mode does not match. Consider taking a look at crossorigin attribute.
+service/hvtrs8%2F-cfâ¦gs-ovSFKQtwb%2Cjq:2 Uncaught TypeError: Cannot read properties of null (reading 'hasAttribute')
+service/hvtrs8%2F-wuw%2Cntific.aoo%2Fgn%2Fil%2F:262 [GroupMarkerNotSet(crbug.com/242999)!:A0302F003C0F0000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader (about:flags#enable-unsafe-swiftshader) flag to opt in to lower security guarantees for trusted content.
+ User region and page region match, or data is missing. Geo Locator will not be shown.
+data:image/png;base64:1  Failed to load resource: net::ERR_INVALID_URL
+ Current Locale: en-in
+ GSAP target .mobile-nav li.menu-level-2 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav li.menu-level-3 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav li.menu-level-4 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav ul.menu-level-1 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav ul.menu-level-2 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target ul.menu-level-3 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav ul.menu-level-4 not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+ GSAP target .mobile-nav li.menu-button.caret-right.close not found. https://greensock.com
+_ @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:990
+  Failed to load resource: the server responded with a status of 404 (Not Found)
+XMLHttpRequest.send @ service/hvtrs8%2F-wuâ¦0bfe%60d1a%2Cjq:267
+ No session found in getSession function
+ No session found in getSession function
+service/hvtrs8%2F-wuw%2Cntific.aoo%2Fgn%2Fil%2F:1 The resource https://27917867-1ebc-4112-a9aa-11916e198dbc-00-1buz43isyrs8f.pike.replit.dev/service/hvtrs8%2F-ioaeeq.lvkdka%2Ccmm-evc-dgskgls-ntificGFC-cnignvlkbq_%60aqe-fmnvs-ntific-qals-NCLC%2Ftap%2FLVKDKAQalsTF%5DNCLC_U_Ugjt%2Cwmfd2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
+ NVIDIA: Modal ID undefined is not a valid ID
+(anonymous) @ service/hvtrs8%2F-wuâ¦3Bec3db1d2d635.hs:2
+ NVIDIA: Modal ID https://www.nvidia.com/en-in/account/ is not a valid ID
+(anonymous) @ service/hvtrs8%2F-wuâ¦3Bec3db1d2d635.hs:2
+ NVIDIA global Navigation Header/Footer React Plugin: global-navigation-react plugin v3.3.0 loaded.
+service/hvtrs8%2F-cfâ¦gs-ovSFKQtwb%2Cjq:2 Uncaught TypeError: Cannot read properties of null (reading 'hasAttribute')
+ NVIDIA global Navigation Header/Footer React Plugin: error when trying to fetch navigation header data from endpoint https://www.nvidia.com/services/com.nvidia.services/nvgdcNavFooterSrvc?locale=en_IN&region=in&brand=account
+(anonymous) @ service/hvtrs8%2F-wuâ¦d5df8g077%2Cjq:1864
+ TypeError: Failed to fetch
+(anonymous) @ service/hvtrs8%2F-wuâ¦d5df8g077%2Cjq:1864
+ NVIDIA global Navigation Header/Footer React Plugin: The fallback JSON is not a valid JSON string. Please check the fallback JSON string.
+(anonymous) @ service/hvtrs8%2F-wuâ¦d5df8g077%2Cjq:1864
+ [object ArrayBuffer]
+chunk-NAGV2JWY.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-KUJQRTRS.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-K77LVPKZ.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-UGYED4NF.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-EBKABN3T.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-A7L237FT.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-KSKX5CIW.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-ZWOVT3SE.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-3QP5QXBT.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-FSFQDCHT.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-RIR5XZTW.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-5BI5VKDI.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-OCHTPYBV.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-BAGQ7FZ3.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-JH24UAFM.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-DOASHD5L.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-4OHQAWPO.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-SUU6VGAU.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-SLAJLBVB.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-6NPXJ6PN.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-TNLH2V7Z.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-HGWZAOHS.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-6JYRB6NG.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-Z3ZAYDQF.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-DW3MPQKI.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-L5DLLGLC.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-OT5WJ3ZD.js:1  Failed to load resource: the server responded with a status of 500 ()
+chunk-IVVF73D5.js:1  Failed to load resource: the server responded with a status of 500 ()
