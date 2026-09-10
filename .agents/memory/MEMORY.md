@@ -1,1 +1,2 @@
 - [Bare proxy limiter](bare-proxy-limiter.md) — keep-alive limiting counts requests per shared preview IP, not just active sockets.
+- [UV page loading](uv-page-loading.md) — the homepage may load UV config/codec, but destination-only handler initialization must stay off the homepage.
