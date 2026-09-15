@@ -340,7 +340,7 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
 
     // Element get set attribute methods
     client.element.on('getAttribute', event => {
-        if (client.element.hasAttribute.call(event.that, __uv.attributePrefix + '-attr-' + event.data.name)) {
+        if (event.that && client.element.hasAttribute.call(event.that, __uv.attributePrefix + '-attr-' + event.data.name)) {
             event.respondWith(
                 event.target.call(event.that, __uv.attributePrefix + '-attr-' + event.data.name)
             );
@@ -587,7 +587,7 @@ async function __uvHook(window, config = {}, bare = '/bare/') {
 
     // Attribute (node.attributes)
     client.attribute.on('getValue', event => {
-        if (client.element.hasAttribute.call(event.that.ownerElement, __uv.attributePrefix + '-attr-' + event.data.name)) {
+        if (event.that?.ownerElement && client.element.hasAttribute.call(event.that.ownerElement, __uv.attributePrefix + '-attr-' + event.data.name)) {
             event.data.value = client.element.getAttribute.call(event.that.ownerElement, __uv.attributePrefix + '-attr-' + event.data.name);
         };
     });

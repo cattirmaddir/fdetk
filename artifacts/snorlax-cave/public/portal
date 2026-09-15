@@ -75,7 +75,9 @@
 </body>
 <script>
 function changeIcon() {
-  var iconUrl = document.getElementById("iconUrl").value;
+  var iconInput = document.getElementById("iconUrl");
+  if (!iconInput) return;
+  var iconUrl = iconInput.value;
   localStorage.setItem("iconUrl", iconUrl);
 
   var link = document.querySelector("link[rel*='icon']");
@@ -92,8 +94,9 @@ function changeIcon() {
 
 window.addEventListener("DOMContentLoaded", function () {
   var storedIconUrl = localStorage.getItem("iconUrl");
-  if (storedIconUrl) {
-    document.getElementById("iconUrl").value = storedIconUrl;
+  var iconInput = document.getElementById("iconUrl");
+  if (storedIconUrl && iconInput) {
+    iconInput.value = storedIconUrl;
     changeIcon();
   }
 });
@@ -194,37 +197,23 @@ window.addEventListener('keydown', (event) => {
 });
 </script>
 </head>
-<br>
-<div id = "ads160x600_1" style="float: left; margin-top: 50px;">
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'b5afbd3f7387ec207eb7011ac605f2c4',
-      'format' : 'iframe',
-      'height' : 600,
-      'width' : 160,
-      'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js"></scr' + 'ipt>');
-  </script>
-  </div>
-  <br>
-  <div id = "ads160x600_2" style="float: right; margin-top: 50px;">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : 'b5afbd3f7387ec207eb7011ac605f2c4',
-        'format' : 'iframe',
-        'height' : 600,
-        'width' : 160,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js"></scr' + 'ipt>');
-    </script>
-    </div>
-<iframe src="loadingscreen.html" id="siteurl" style="position: fixed; inset: 0px; outline: none; border: none; height: 100%; width: 100%; overflow: hidden;"></iframe>
+<style>
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+</style>
+<iframe id="siteurl" title="Proxy content" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" style="display: block; position: fixed; top: 0; left: 0; z-index: 9999; outline: none; border: none; height: 100vh; width: 100vw; overflow: hidden;"></iframe>
 <script>
-window.onload = function () {
-      let encodedUrl = localStorage.getItem("encodedUrl");
-      encodedUrl = "/service/" + encodedUrl;
-      document.querySelector("#siteurl").src = encodedUrl;
-    };
+document.addEventListener("DOMContentLoaded", function () {
+      const encodedUrl = localStorage.getItem("encodedUrl");
+      if (!encodedUrl) {
+        window.location.replace("/");
+        return;
+      }
+      document.querySelector("#siteurl").src = "/service/" + encodedUrl;
+    }, { once: true });
 </script>

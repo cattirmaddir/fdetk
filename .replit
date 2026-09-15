@@ -1,5 +1,7 @@
 modules = ["nodejs-24"]
 
+run = "pnpm run start:snorlax"
+
 [deployment]
 router = "application"
 deploymentTarget = "autoscale"

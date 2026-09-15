@@ -157,8 +157,9 @@ class UVServiceWorker extends EventEmitter {
                 case 'iframe':
                 case 'document':
                         if (isHtml(ultraviolet.meta.url, (responseCtx.headers['content-type'] || ''))) {
+                    const html = await response.text();
                             responseCtx.body = ultraviolet.rewriteHtml(
-                                await response.text(), 
+                      html.replace(/<link\b[^>]*\brel\s*=\s*["'][^"']*\bpreload\b[^"']*["'][^>]*>/gi, ''),
                                 { 
                                     document: true ,
                                     injectHead: ultraviolet.createHtmlInject(

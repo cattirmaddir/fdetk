@@ -55,42 +55,16 @@
     <br>
     <center>
     <div style="align-content: center;">
-    <script type="text/javascript">
-      atOptions = {
-        'key' : '7707205fbef64510c14defbad93feb7c',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-      document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/7707205fbef64510c14defbad93feb7c/invoke.js"></scr' + 'ipt>');
-    </script>
     </center>
     </div>
     <br>
     <div id = "ads160x600_1" style="float: left; margin-top: 250px;">
       <script type="text/javascript">
-        atOptions = {
-          'key' : 'b5afbd3f7387ec207eb7011ac605f2c4',
-          'format' : 'iframe',
-          'height' : 600,
-          'width' : 160,
-          'params' : {}
-        };
-        document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js"></scr' + 'ipt>');
       </script>
       </div>
       <br>
       <div id = "ads160x600_2" style="float: right; margin-top: 250px;">
         <script type="text/javascript">
-          atOptions = {
-            'key' : 'b5afbd3f7387ec207eb7011ac605f2c4',
-            'format' : 'iframe',
-            'height' : 600,
-            'width' : 160,
-            'params' : {}
-          };
-          document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/b5afbd3f7387ec207eb7011ac605f2c4/invoke.js"></scr' + 'ipt>');
         </script>
         </div>
       
@@ -267,44 +241,6 @@
       });
       alert('All saved cookie data cleared');
       location.reload(true);
-    }
-  });
-</script>
-<script>
-  function checkPopups() {
-    var newWin = window.open("", "", "width=100, height=100");
-    if (newWin) {
-      newWin.close();
-      return true;
-    } else {
-      say1();
-      return false;
-    }
-  }
-
-  function say1() {
-    alert("HELL0! for auto cloaking in about:blank please allow pop ups!");
-  }
-
-  window.addEventListener('load', function () {
-    var currentUrl = window.location.href;
-    var bgUrl = localStorage.getItem('backgroundImage');
-    if (currentUrl !== "about:blank" && !sessionStorage.getItem('tabOpened')) {
-      if (checkPopups()) {
-        sessionStorage.setItem('tabOpened', 'true');
-        var win = window.open('about:blank', '_blank');
-        if (win) {
-          win.document.write("<html style='height:100%; margin:0; padding:0;'><body style='height:100%; margin:0; padding:0;'><iframe src='" + currentUrl + "' style='width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'></iframe></body></html>");
-          win.onbeforeunload = function () {
-            sessionStorage.removeItem('tabOpened');
-          };
-          window.close();
-        } else {
-          sessionStorage.removeItem('tabOpened');
-        }
-      } else if (!sessionStorage.getItem('alertShown')) {
-        sessionStorage.setItem('alertShown', 'true');
-      }
     }
   });
 </script>

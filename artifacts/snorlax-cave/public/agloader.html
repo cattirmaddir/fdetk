@@ -117,18 +117,24 @@ window.addEventListener('keydown', (event) => {
 <script src="/uv/uv.bundle.js"></script>
 <script src="/uv/uv.bundle.js"></script>
 <script src="/uv/uv.config.js"></script>
-<script src="/assets/js/ag.js"></script>
 <script>
     window.navigator.serviceWorker
     .register("/sw.js", {
       scope: __uv$config.prefix,
     })
   </script>
+  <style>
+    html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+  </style>
   <script>
-    window.onload = function () {
-          let encodedAg = localStorage.getItem("agUrl");
-          document.querySelector("#agLoader").src = encodedAg;
-    };
-</script>
-<iframe src="loadingscreen.html" id="agLoader" style="position: fixed; inset: 0px; outline: none; border: none; height: 100%; width: 100%; overflow: hidden;"></iframe>
+    document.addEventListener("DOMContentLoaded", function () {
+      const encodedAg = localStorage.getItem("agUrl");
+      if (!encodedAg) {
+        window.location.replace("/");
+        return;
+      }
+      document.querySelector("#agLoader").src = encodedAg;
+    }, { once: true });
+  </script>
+<iframe id="agLoader" title="Proxied site" allow="fullscreen; autoplay; encrypted-media; picture-in-picture" style="display: block; position: fixed; inset: 0; z-index: 9999; outline: none; border: none; height: 100vh; width: 100vw; overflow: hidden;"></iframe>
 </body>

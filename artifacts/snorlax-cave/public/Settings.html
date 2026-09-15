@@ -105,10 +105,30 @@
       <input class="search-bar" style="width:250px;height:50px;margin:10px;" type="text" id="iconUrl"
         placeholder="Enter icon URL">
       <button onclick="changeIcon()">Change Icon</button>
+      <br>
+      <br>
+      <h1 class="large">Search Engine</h1>
+      <br>
+      <select id="searchEngine" class="search-bar" style="width:250px;height:50px;margin:10px;">
+        <option value="google">Chrome</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+      </select>
+      <button onclick="saveSearchEngine()">Save Search Engine</button>
     </div>
     <script src="/assets/js/index.js"></script>
     <script src="/uv/uv.bundle.js"></script>
     <script src="/uv/uv.config.js"></script>
+    <script>
+      function loadSearchEngine() {
+        document.getElementById('searchEngine').value = localStorage.getItem('searchEngine') || 'google';
+      }
+
+      function saveSearchEngine() {
+        localStorage.setItem('searchEngine', document.getElementById('searchEngine').value);
+      }
+
+      window.addEventListener('DOMContentLoaded', loadSearchEngine);
+    </script>
     <script>
       // Custom Background Check
       var bgUrl = localStorage.getItem('backgroundImage');

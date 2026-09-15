@@ -19,9 +19,24 @@ async function openProxy(event) {
 
     let url = input.value.trim();
     if (!url) throw new Error("Enter a URL or search term");
-    if (!isUrl(url)) url = "https://www.google.com/search?q=" + encodeURIComponent(url);
-    else if (!(url.startsWith("https://") || url.startsWith("http://"))) {
-      url = "http://" + url;
+    if (!isUrl(url)) {
+      const searchEngine = localStorage.getItem("searchEngine") || "google";
+      const searchBase = searchEngine === "duckduckgo"
+        ? "https://duckduckgo.com/?q="
+        : "https://www.google.com/search?q=";
+      url = searchBase + encodeURIComponent(url);
+    }
+    else if (/^http:\/\//i.test(url)) {
+      url = "https://" + url.slice("http://".length);
+    }
+    else if (!/^https:\/\//i.test(url)) {
+      url = "https://" + url;
+    }
+
+    const target = new URL(url);
+    if (target.hostname === "nvidia.com" || target.hostname.endsWith(".nvidia.com")) {
+      window.location.assign(target.href);
+      return;
     }
 
     localStorage.setItem("encodedUrl", window.__uv$config.encodeUrl(url));

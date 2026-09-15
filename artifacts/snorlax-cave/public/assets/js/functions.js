@@ -1,14 +1,29 @@
 function apps(url) {
     window.navigator.serviceWorker.register('/sw.js', {
-      scope: __uv$config.prefix
-  }).then(() => {
-      localStorage.setItem('agUrl', location.href=__uv$config.prefix + __uv$config.encodeUrl(url));
-      location.href = '/dashboard';
-  });
+        scope: __uv$config.prefix
+    }).then(() => {
+        const encodedUrl = __uv$config.encodeUrl(url);
+        localStorage.setItem('agUrl', __uv$config.prefix + encodedUrl);
+        window.location.assign('/dashboard');
+    }).catch((error) => {
+        console.error('Unable to open proxied app:', error);
+    });
   }
   
   function openLink(url) {
-    apps('https://' + url);
+        const target = new URL(/^https?:\/\//i.test(url) ? url : 'https://' + url);
+
+        if (target.hostname === 'play.geforcenow.com') {
+            window.location.assign(target.href);
+            return;
+        }
+
+        if (target.hostname === 'nvidia.com' || target.hostname.endsWith('.nvidia.com')) {
+            window.location.assign(target.href);
+            return;
+        }
+
+        apps(target.href);
   }
   
   function ourDiscord() {

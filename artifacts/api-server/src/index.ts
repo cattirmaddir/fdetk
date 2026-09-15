@@ -1,4 +1,5 @@
 import http from "node:http";
+import https from "node:https";
 import { createBareServer } from "@tomphttp/bare-server-node";
 import app from "./app";
 import { logger } from "./lib/logger";
@@ -18,11 +19,28 @@ if (Number.isNaN(port) || port <= 0) {
 }
 
 const server = http.createServer();
+
+server.keepAliveTimeout = 5_000;
+server.headersTimeout = 10_000;
+server.requestTimeout = 30_000;
+
 const bareServer = createBareServer("/bare/", {
+  httpAgent: new http.Agent({
+    keepAlive: true,
+    maxSockets: 128,
+    maxFreeSockets: 32,
+    timeout: 30_000,
+  }),
+  httpsAgent: new https.Agent({
+    keepAlive: true,
+    maxSockets: 128,
+    maxFreeSockets: 32,
+    timeout: 30_000,
+  }),
   connectionLimiter: {
-    maxConnectionsPerIP: 1000,
+    maxConnectionsPerIP: 100_000,
     windowDuration: 60,
-    blockDuration: 5,
+    blockDuration: 1,
   },
 });
 
