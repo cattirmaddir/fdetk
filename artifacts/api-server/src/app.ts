@@ -51,8 +51,6 @@ const staticRoot = path.resolve(
   "../../../artifacts/snorlax-cave/dist/public",
 );
 
-app.use(express.static(staticRoot));
-
 app.get("/", (_req, res) => res.sendFile(path.join(staticRoot, "index.html")));
 app.get("/math", (_req, res) => res.sendFile(path.join(staticRoot, "Games.html")));
 app.get("/english", (_req, res) => res.sendFile(path.join(staticRoot, "Apps.html")));
@@ -60,5 +58,7 @@ app.get("/about", (_req, res) => res.sendFile(path.join(staticRoot, "About.html"
 app.get("/settings", (_req, res) => res.sendFile(path.join(staticRoot, "Settings.html")));
 app.get("/portal", (_req, res) => res.sendFile(path.join(staticRoot, "loader.html")));
 app.get("/dashboard", (_req, res) => res.sendFile(path.join(staticRoot, "agloader.html")));
+
+app.use(express.static(staticRoot));
 
 export default app;

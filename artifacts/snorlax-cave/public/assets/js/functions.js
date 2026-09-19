@@ -9,6 +9,11 @@ function apps(url) {
         console.error('Unable to open proxied app:', error);
     });
   }
+
+document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href="#"]');
+        if (link) event.preventDefault();
+});
   
   function openLink(url) {
         const target = new URL(/^https?:\/\//i.test(url) ? url : 'https://' + url);
