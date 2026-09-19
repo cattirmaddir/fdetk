@@ -1,5 +1,6 @@
 <div align="center">
 
+<<<<<<< HEAD
 # Welcome to Snorlax's Cave!
 Snorlax's Cave is a UV-powered proxy and game site for local hosting and Replit deployments. Built for the v2.0 release.
 
@@ -89,3 +90,8 @@ pnpm run start:snorlax
 
 ## Support us
 **[SUPPORT US!](https://patreon.com/SnorlaxCave)**
+=======
+# YET.
+
+# EDIT: WORKS ON VPS OR PC NOW.
+>>>>>>> d236e4e38c76d9ac0e37299353a8446c725710c2
