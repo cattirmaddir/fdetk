@@ -94,4 +94,4 @@ pnpm run start:snorlax
 # YET.
 
 # EDIT: WORKS ON VPS OR PC NOW.
->>>>>>> d236e4e38c76d9ac0e37299353a8446c725710c2
+
